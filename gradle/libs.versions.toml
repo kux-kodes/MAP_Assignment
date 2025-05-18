@@ -16,6 +16,8 @@ navigation-compose = "2.7.7"
 viewmodel-compose = "2.8.0"
 kotlin-coroutines = "1.8.0"
 lifecycle-livedata = "2.8.0"
+adsMobileSdk = "0.15.1-alpha01"
+transportApi = "4.0.0"
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
@@ -39,6 +41,8 @@ androidx-navigation = {group = "androidx.navigation", name = "navigation", versi
 androidx-viewmodel = { group = "androidx.lifecycle", name = "viewmodel", version.ref = "viewmodel-compose"}
 kotlinx-coroutines = {group = "org.jetbrains.kotlin", name = "coroutines", version.ref = "kotlin-coroutines"}
 androidx-lifecycle-livedata = {group = "androidx.lifecycle", name = "livedata", version.ref = "lifecycle-livedata"}
+ads-mobile-sdk = { group = "com.google.android.libraries.ads.mobile.sdk", name = "ads-mobile-sdk", version.ref = "adsMobileSdk" }
+transport-api = { group = "com.google.android.datatransport", name = "transport-api", version.ref = "transportApi" }
 
 
 [plugins]
