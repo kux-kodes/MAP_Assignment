@@ -24,13 +24,15 @@ import java.time.LocalDate
 import java.time.format.TextStyle
 import java.util.*
 import androidx.compose.material.icons.filled.DateRange
+import androidx.navigation.NavHostController
 
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun EventsScreen(
     onNavigate: (String) -> Unit = {},
-    onEventClick: (Event) -> Unit = {}
+    onEventClick: (Event) -> Unit = {},
+    navController: NavHostController
 ) {
     var selectedDate by remember { mutableStateOf(LocalDate.now()) }
     val events = remember { sampleEvents() }
@@ -225,6 +227,6 @@ fun MoreBottomNavigationBar(
 @Composable
 fun EventsScreenPreview() {
     MaterialTheme {
-        EventsScreen()
+        //EventsScreen(navController = navController)
     }
 }

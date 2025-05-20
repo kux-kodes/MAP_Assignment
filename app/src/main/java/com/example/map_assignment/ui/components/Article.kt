@@ -14,11 +14,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextForegroundStyle.Unspecified.brush
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
@@ -55,12 +57,12 @@ fun ArticleScreen(navController: NavController) {
                     modifier = Modifier
                         .fillMaxSize()
                         .background(
-                            Brush.verticalGradient(
+                            Brush.linearGradient(
                                 colors = listOf(
                                     Color.Transparent,
                                     darkCharcoal.copy(alpha = 0.6f)
                                 ),
-                                startY = 300f
+                                start = offset(300f)
                             )
                         )
                 )
@@ -134,8 +136,8 @@ fun ArticleScreen(navController: NavController) {
 
 
                 Text(
-                    text = " "
-                            style = MaterialTheme.typography.bodyLarge,
+                    text = " " ,
+                    style = MaterialTheme.typography.bodyLarge,
                     color = darkCharcoal.copy(alpha = 0.9f),
                     lineHeight = 24.sp,
                     modifier = Modifier.padding(bottom = 24.dp)

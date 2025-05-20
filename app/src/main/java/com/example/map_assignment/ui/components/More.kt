@@ -14,6 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
+import androidx.navigation.NavHostController
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -26,7 +27,8 @@ fun MoreScreen(
     onUpdateDetails: () -> Unit = {},
     onAccountSecurity: () -> Unit = {},
     onNotificationSettings: () -> Unit = {},
-    onSuggestionBox: () -> Unit = {}
+    onSuggestionBox: () -> Unit = {},
+    navController: NavHostController
 ) {
     Scaffold(
         topBar = {
@@ -155,10 +157,11 @@ fun BottomNavigationBar(
 @Preview(showBackground = true)
 @Composable
 fun MoreScreenPreview() {
+    /*
     MaterialTheme {
         MoreScreen(
             currentRoute = "more",
-            onNavigate = {} // Preview won’t navigate but this shows the bottom bar
+            onNavigate = {}
         )
-    }
+    } */
 }
